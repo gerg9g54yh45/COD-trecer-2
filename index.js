@@ -304,7 +304,12 @@ function executeReg(message, content) {
                     if ( !team.teamName ) return false // если нет имени то можно не сравнивать
                     return team.teamName.toLowerCase() == content.toLowerCase()
                 })
-                if ( checkHasTeamname ) {
+
+                const checkHasTeamrole = message.guild.roles.find(role => { // првоеряем существование такой роли
+                    return role.name.toLowerCase() == content.toLowerCase()
+                })
+
+                if ( checkHasTeamname || checkHasTeamrole ) {
                     // если такое имя уже используется (проверяем без учета регистра!)
                     team.mess = message.reply(`Такая команда уже существует! Напишите другое название команды.`)
                 } else {
