@@ -305,7 +305,7 @@ function executeReg(message, content) {
                     return team.teamName.toLowerCase() == content.toLowerCase()
                 })
 
-                const checkHasTeamrole = message.guild.roles.find(role => { // првоеряем существование такой роли
+                const checkHasTeamrole = message.guild.roles.cache.find(role => { // првоеряем существование такой роли
                     return role.name.toLowerCase() == content.toLowerCase()
                 })
 
