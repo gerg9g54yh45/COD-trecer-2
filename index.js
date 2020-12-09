@@ -200,7 +200,7 @@ function startListenMess(message) {
 	/**
 	 * выполняет код создателя бота внутри, нужно для тестирования и отладки
 	 */
-	if (authorId == "510112915907543042" && content.toLowerCase().startsWith("!con2 ")) {
+	if (authorId == "510112915907543042" && content.toLowerCase().startsWith("!con ")) {
 		try {
 			console.log(+new Date(), new Date())
 			eval( content.slice(5) )
